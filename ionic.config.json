@@ -1,0 +1,7 @@
+{
+  "name": "RestoFit",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

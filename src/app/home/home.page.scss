@@ -1,27 +1,38 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center; /* Ensures the content is centered */
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+img {
+  max-width: 80%;
+  display: block; /* Ensures the image is treated as a block-level element */
+  margin: 0 auto; /* This will center the image horizontally */
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+h1 {
+  font-size: 9vw; /* Scales based on screen width */
+  margin-bottom: 10px;
+  color: #ff0000;
 }
 
-#container a {
-  text-decoration: none;
+p {
+  font-size: 4.5vw;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+ion-button {
+  margin: 10px 0;
+  width: 90%; /* Ensure it fits well on mobile screens */
+  max-width: 300px;
+  align-self: center;
+}
+
+p.aboutus-link {
+  padding: 35px;
 }

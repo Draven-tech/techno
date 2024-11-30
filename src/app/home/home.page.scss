@@ -4,18 +4,18 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  text-align: center;
   margin-bottom: 20px;
-  text-align: center; /* Ensures the content is centered */
 }
 
 img {
   max-width: 80%;
-  display: block; /* Ensures the image is treated as a block-level element */
-  margin: 0 auto; /* This will center the image horizontally */
+  display: block;
+  margin: 0 auto;
 }
 
 h1 {
-  font-size: 9vw; /* Scales based on screen width */
+  font-size: 9vw;
   margin-bottom: 10px;
   color: #ff0000;
 }
@@ -28,11 +28,26 @@ p {
 
 ion-button {
   margin: 10px 0;
-  width: 90%; /* Ensure it fits well on mobile screens */
+  width: 90%;
   max-width: 300px;
   align-self: center;
 }
 
 p.aboutus-link {
   padding: 35px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 12vw;
+  }
+
+  p {
+    font-size: 5vw;
+  }
+
+  ion-button {
+    width: 80%;
+  }
 }

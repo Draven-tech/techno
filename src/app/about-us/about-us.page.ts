@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-about-us',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsPage implements OnInit {
 
-  constructor() { }
+  constructor(private platform: Platform) {}
 
   ngOnInit() {
+    // Reset viewport on page load to ensure mobile view consistency
+    this.platform.ready().then(() => {
+      const viewportMetaTag = document.querySelector('meta[name="viewport"]');
+      if (viewportMetaTag) {
+        viewportMetaTag.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+      }
+    });
   }
-
 }

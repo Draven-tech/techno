@@ -20,6 +20,14 @@
 </head>
 
 <body>
+  <script>
+    window.addEventListener('load', function() {
+      const viewportMetaTag = document.querySelector('meta[name="viewport"]');
+      if (viewportMetaTag) {
+        viewportMetaTag.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+      }
+    });
+  </script>  
   <app-root></app-root>
 </body>
 

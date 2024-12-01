@@ -1,29 +1,51 @@
 .container {
-    padding: 20px;
+    padding: 10px 15px;
     text-align: center;
   }
   
   .member-menu-content {
     h2 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
+      font-size: clamp(1.5em, 5vw, 2em);
+      margin-bottom: 15px;
       color: #ff6347;
     }
   
     ion-list {
       margin: 0 auto;
-      max-width: 500px;
+      width: 100%;
+      max-width: 400px;
+      padding: 0;
   
       ion-item {
         --background: #1e1e1e;
         color: #d3d3d3;
         border-radius: 8px;
-        margin: 10px 0;
+        margin: 8px 0;
+        padding: 15px;
+        --inner-padding: 10px;
+        display: flex;
+        align-items: center;
       }
   
       ion-icon {
         color: #ff6347;
+        font-size: 1.5em;
       }
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 5px 10px;
+    }
+  
+    .member-menu-content h2 {
+      font-size: 1.5em;
+    }
+  
+    ion-item {
+      padding: 10px;
+      --inner-padding: 8px;
     }
   }
   

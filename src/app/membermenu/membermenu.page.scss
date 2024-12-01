@@ -1,0 +1,29 @@
+.container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .member-menu-content {
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #ff6347;
+    }
+  
+    ion-list {
+      margin: 0 auto;
+      max-width: 500px;
+  
+      ion-item {
+        --background: #1e1e1e;
+        color: #d3d3d3;
+        border-radius: 8px;
+        margin: 10px 0;
+      }
+  
+      ion-icon {
+        color: #ff6347;
+      }
+    }
+  }
+  

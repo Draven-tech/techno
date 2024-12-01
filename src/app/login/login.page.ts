@@ -14,7 +14,7 @@ export class LoginPage {
 
   login() {
     if (this.email === 'testuser@usjr' && this.password === 'usjr123') {
-      this.navCtrl.navigateForward('/main-menu'); // Replace with actual route
+      this.navCtrl.navigateForward('/membermenu'); // Replace with actual route
     } else {
       alert('Invalid credentials. Please try again.');
     }

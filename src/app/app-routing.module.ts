@@ -42,9 +42,22 @@ const routes: Routes = [
   {
     path: 'messages',
     loadChildren: () => import('./messages/messages.module').then( m => m.MessagesPageModule)
-  },  {
+  },
+  {
     path: 'gym-locations',
     loadChildren: () => import('./gym-locations/gym-locations.module').then( m => m.GymLocationsPageModule)
+  },
+  {
+    path: 'nonmember-menu',
+    loadChildren: () => import('./nonmember-menu/nonmember-menu.module').then( m => m.NonMemberMenuPageModule)
+  },
+  {
+    path: 'membership-details',
+    loadChildren: () => import('./membership-details/membership-details.module').then( m => m.MembershipDetailsPageModule)
+  },
+  {
+    path: 'meal-details',
+    loadChildren: () => import('./meal-details/meal-details.module').then( m => m.MealDetailsPageModule)
   },
 
 

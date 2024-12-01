@@ -22,7 +22,8 @@ const routes: Routes = [
   {
     path: 'about-us',
     loadChildren: () => import('./about-us/about-us.module').then((m) => m.AboutUsPageModule),
-  },  {
+  },
+  {
     path: 'membermenu',
     loadChildren: () => import('./membermenu/membermenu.module').then( m => m.MembermenuPageModule)
   },
@@ -37,7 +38,11 @@ const routes: Routes = [
   {
     path: 'equipment-status',
     loadChildren: () => import('./equipment-status/equipment-status.module').then( m => m.EquipmentStatusPageModule)
+  },  {
+    path: 'coach-chat',
+    loadChildren: () => import('./coach-chat/coach-chat.module').then( m => m.CoachChatPageModule)
   },
+
 
   // Add any other routes you need here
 ];

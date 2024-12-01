@@ -1,21 +1,30 @@
 ion-item {
-    --background: #b8b0b0;
-    border-radius: 8px;
-    margin: 8px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  ion-label h2 {
-    color: #333;
-    font-weight: 600;
-  }
-  
-  .available {
-    color: green;
-    font-weight: bold;
-  }
-  
-  .in-use {
-    color: red;
-    font-weight: bold;
-  }
+  --background: #000000;
+  border-radius: 8px;
+  margin: 8px 0;
+  box-shadow: 0 2px 4px rgba(18, 18, 18, 0.1);
+  transition: transform 0.3s ease;
+}
+
+ion-item:active {
+  transform: scale(0.95);
+}
+
+ion-label {
+  padding: 16px;
+}
+
+ion-label h2 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.available {
+  color: green;
+  font-weight: bold;
+}
+
+.in-use {
+  color: red;
+  font-weight: bold;
+}

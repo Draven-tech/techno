@@ -10,8 +10,8 @@ export class GymLocationsPage implements OnInit {
   map!: L.Map;
 
   mockGymLocation = {
-    lat: 10.273828844086307, // Cebu latitude
-    lng: 123.85891171349382 // Cebu longitude
+    lat: 10.273828844086307,
+    lng: 123.85891171349382
   };
 
   constructor() {}
@@ -22,7 +22,7 @@ export class GymLocationsPage implements OnInit {
 
   initializeMap() {
     setTimeout(() => {
-      this.map = L.map('map').setView([this.mockGymLocation.lat, this.mockGymLocation.lng], 13);
+      this.map = L.map('map').setView([this.mockGymLocation.lat, this.mockGymLocation.lng], 15);
 
       // Use Esri's satellite imagery layer
       L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/nonmember-menu"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Order Meals</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let meal of dietMeals" [routerLink]="['/meal-details', meal.id]">
+      <ion-label>{{ meal.name }}</ion-label>
+      <ion-badge slot="end">{{ meal.dietPlan }}</ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>

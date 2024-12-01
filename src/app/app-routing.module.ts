@@ -52,13 +52,22 @@ const routes: Routes = [
     loadChildren: () => import('./nonmember-menu/nonmember-menu.module').then( m => m.NonMemberMenuPageModule)
   },
   {
-    path: 'membership-details',
+    path: 'membership-details/:id',
     loadChildren: () => import('./membership-details/membership-details.module').then( m => m.MembershipDetailsPageModule)
   },
   {
-    path: 'meal-details',
+    path: 'meal-details/:id',
     loadChildren: () => import('./meal-details/meal-details.module').then( m => m.MealDetailsPageModule)
   },
+  {
+    path: 'membership-options',
+    loadChildren: () => import('./membership-options/membership-options.module').then( m => m.MembershipOptionsPageModule)
+  },
+  {
+    path: 'meal-options',
+    loadChildren: () => import('./meal-options/meal-options.module').then( m => m.MealOptionsPageModule)
+  },
+
 
 
 

@@ -14,16 +14,29 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list>
-    <ion-item *ngFor="let equipment of equipmentList">
+  <!-- Equipment List -->
+  <ion-list *ngIf="!selectedEquipment">
+    <ion-item *ngFor="let equipment of equipmentList" (click)="selectEquipment(equipment)">
       <ion-label>
         <h2>{{ equipment.name }}</h2>
+        <p>Click to view units</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Equipment Units -->
+  <ion-list *ngIf="selectedEquipment">
+    <ion-item *ngFor="let unit of selectedEquipment.units">
+      <ion-label>
+        <h2>{{ unit.name }}</h2>
         <p>Status: 
-          <span [ngClass]="{'available': equipment.isAvailable, 'in-use': !equipment.isAvailable}">
-            {{ equipment.isAvailable ? 'Available' : 'In Use' }}
+          <span [ngClass]="{'available': unit.isAvailable, 'in-use': !unit.isAvailable}">
+            {{ unit.isAvailable ? 'Available' : 'In Use' }}
           </span>
         </p>
       </ion-label>
     </ion-item>
+
+    <ion-button expand="full" (click)="clearSelection()">Back</ion-button>
   </ion-list>
 </ion-content>

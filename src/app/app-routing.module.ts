@@ -38,9 +38,6 @@ const routes: Routes = [
   {
     path: 'equipment-status',
     loadChildren: () => import('./equipment-status/equipment-status.module').then( m => m.EquipmentStatusPageModule)
-  },  {
-    path: 'coach-chat',
-    loadChildren: () => import('./coach-chat/coach-chat.module').then( m => m.CoachChatPageModule)
   },
   {
     path: 'messages',

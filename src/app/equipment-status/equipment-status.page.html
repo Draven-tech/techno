@@ -1,13 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>equipment-status</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/membermenu"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Equipment Status</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">equipment-status</ion-title>
+      <ion-title size="large">Equipment Status</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let equipment of equipmentList">
+      <ion-label>
+        <h2>{{ equipment.name }}</h2>
+        <p>Status: 
+          <span [ngClass]="{'available': equipment.isAvailable, 'in-use': !equipment.isAvailable}">
+            {{ equipment.isAvailable ? 'Available' : 'In Use' }}
+          </span>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

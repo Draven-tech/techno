@@ -1,3 +1,17 @@
+body {
+  background-image: url('/assets/bg.jpg'); /* Reference the image correctly */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+ion-content {
+  --background: transparent; /* Ensure ion-content has no background color */
+}
+
 ion-content {
   display: flex;
   justify-content: center;
@@ -5,7 +19,7 @@ ion-content {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #f0f4f7;
+ 
 }
 
 .logo-container {
@@ -27,11 +41,10 @@ ion-content {
   width: 100%;
   max-width: 400px;
   padding: 20px;
-  background: black;
+  background: rgba(0, 0, 0, 0.5); /* 5% transparent black */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  
   /* Prevents box from pushing layout out of center */
   display: flex;
   flex-direction: column;

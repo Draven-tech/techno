@@ -1,3 +1,17 @@
+body {
+  background-image: url('/assets/bg.jpg'); /* Reference the image correctly */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+ion-content {
+  --background: transparent; /* Ensure ion-content has no background color */
+}
+
 .container {
     padding: 10px 15px;
     text-align: center;
@@ -17,7 +31,7 @@
       padding: 0;
   
       ion-item {
-        --background: #1e1e1e;
+        --background: rgba(0, 0, 0, 0.5); /* 5% transparent black */
         color: #d3d3d3;
         border-radius: 8px;
         margin: 8px 0;

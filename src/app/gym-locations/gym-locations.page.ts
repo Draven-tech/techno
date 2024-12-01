@@ -10,8 +10,8 @@ export class GymLocationsPage implements OnInit {
   map!: L.Map;
 
   mockGymLocation = {
-    lat: 10.3157, // Cebu latitude
-    lng: 123.8854 // Cebu longitude
+    lat: 10.273828844086307, // Cebu latitude
+    lng: 123.85891171349382 // Cebu longitude
   };
 
   constructor() {}
@@ -31,7 +31,7 @@ export class GymLocationsPage implements OnInit {
 
       L.marker([this.mockGymLocation.lat, this.mockGymLocation.lng])
         .addTo(this.map)
-        .bindPopup('Mock Gym Location: Cebu')
+        .bindPopup('Gym Location: Mock')
         .openPopup();
     }, 100); // Delay to ensure map div is rendered
   }

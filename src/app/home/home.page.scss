@@ -1,3 +1,8 @@
+body {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text for contrast */
+}
+
 .welcome-section {
   display: flex;
   justify-content: center;
@@ -6,6 +11,7 @@
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
+  background-color: #000000; /* Black background */
 }
 
 img {
@@ -17,13 +23,14 @@ img {
 h1 {
   font-size: 9vw;
   margin-bottom: 10px;
-  color: #ff0000;
+  color: #ff0000; /* Red text color */
 }
 
 p {
   font-size: 4.5vw;
   margin-bottom: 20px;
   padding: 20px;
+  color: #ffffff; /* White text color */
 }
 
 ion-button {

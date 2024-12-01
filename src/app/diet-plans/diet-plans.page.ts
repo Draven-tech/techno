@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-diet-plans',
@@ -7,15 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./diet-plans.page.scss']
 })
 export class DietPlansPage implements OnInit {
-  public dietPlans = [
-    
-  ];
+  public days: string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 
-  constructor(private router: Router) {}  
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
   navigateToMenu() {
-    this.router.navigate(['/membermenu']);  
+    this.router.navigate(['/membermenu']);
   }
 }

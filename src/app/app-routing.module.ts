@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'equipment-status',
     loadChildren: () => import('./equipment-status/equipment-status.module').then( m => m.EquipmentStatusPageModule)
   },
+  {
+    path: 'messages',
+    loadChildren: () => import('./messages/messages.module').then( m => m.MessagesPageModule)
+  },
 
   // Add any other routes you need here
 ];

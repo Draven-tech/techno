@@ -42,7 +42,11 @@ const routes: Routes = [
   {
     path: 'messages',
     loadChildren: () => import('./messages/messages.module').then( m => m.MessagesPageModule)
+  },  {
+    path: 'gym-locations',
+    loadChildren: () => import('./gym-locations/gym-locations.module').then( m => m.GymLocationsPageModule)
   },
+
 
 
   // Add any other routes you need here

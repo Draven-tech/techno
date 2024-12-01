@@ -1,20 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
-import { IonicModule } from '@ionic/angular';
-
-import { LoginPageRoutingModule } from './login-routing.module';
-
-import { LoginPage } from './login.page';
-
-@NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    LoginPageRoutingModule
-  ],
-  declarations: [LoginPage]
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
 })
-export class LoginPageModule {}
+export class LoginPage {
+  email: string = '';
+  password: string = '';
+
+  constructor(private navCtrl: NavController) {}
+
+  login() {
+    if (this.email === 'testuser@usjr' && this.password === 'usjr123') {
+      this.navCtrl.navigateForward('/main-menu'); // Replace with actual route
+    } else {
+      alert('Invalid credentials. Please try again.');
+    }
+  }
+}

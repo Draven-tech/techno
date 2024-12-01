@@ -1,116 +1,107 @@
 /* Header Styling */
 ion-header {
-    --background: #3880ff; /* Primary color for the header */
-    --color: white; /* Text color for the header */
-    border-bottom: 2px solid #f4f5f8; /* Light border under the header for separation */
-  }
-  
-  ion-toolbar {
-    --padding-start: 16px;
-    --padding-end: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Back to Member Menu Button */
-  ion-button[fill="clear"] {
-    --color: white;
-    padding: 0;
-    font-size: 1rem;
-  }
-  
+  --background: #000000; /* Black background */
+  --color: #ffffff; /* White text */
+  border-bottom: 2px solid #2b2c2d; /* Light border for separation */
+}
+
+ion-toolbar {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* Back to Member Menu Button */
 ion-button[fill="clear"] {
-    --color: black; /* Change text and icon color to black */
-    padding: 0;
+  --color: #ffffff; /* White text for clear buttons */
+  padding: 0;
+  font-size: 1rem;
+}
+
+/* Back Button Icon */
+ion-button[fill="clear"] ion-icon {
+  color: #ffffff; /* White icon */
+}
+
+/* List Item Styling */
+ion-item {
+  --background: #000000; /* Black background */
+  --border-color: #2b2c2d; /* Dark gray border */
+  margin-bottom: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for List Items */
+ion-item:hover {
+  transform: scale(1.02); /* Slight enlargement on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bigger shadow */
+}
+
+/* Routine Name */
+ion-item ion-label h2 {
+  color: #ffffff; /* White text for routine name */
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+/* Routine Description */
+ion-item ion-label p {
+  color: #b0b0b0; /* Light gray text */
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+/* Background Color for Routine List */
+ion-list {
+  --background: #000000; /* Black background for the list */
+}
+
+/* Floating Action Button Styling */
+ion-fab {
+  --background: #ffffff; /* White background for the FAB */
+  --background-focused: #f0f0f0; /* Light gray when focused */
+  --color: #000000; /* Black icon color */
+}
+
+ion-fab-button {
+  --border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Floating effect */
+  transition: transform 0.3s ease;
+}
+
+/* Floating Action Button Hover Effect */
+ion-fab-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Bigger shadow on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  ion-item {
+    padding: 8px 12px;
+  }
+
+  ion-label h2 {
     font-size: 1rem;
   }
-  
-  /* Back Button Icon */
-  ion-button[fill="clear"] ion-icon {
-    color: black; /* Ensure the icon is also black */
+
+  ion-label p {
+    font-size: 0.8rem;
   }
-  
-  
-  /* List Item Styling */
-  ion-item {
-    --background: #ffffff; /* White background for each list item */
-    --border-color: #dcdcdc; /* Light gray border */
-    margin-bottom: 12px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
-    padding: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  ion-button {
+    padding: 6px 16px;
+    font-size: 0.85rem;
   }
-  
-  /* Hover Effect for List Items */
-  ion-item:hover {
-    transform: scale(1.02); /* Slight enlargement on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bigger shadow */
-  }
-  
-  /* Routine Name */
-  ion-item ion-label h2 {
-    color: #3880ff; /* Blue color for the routine name */
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 6px;
-  }
-  
-  /* Routine Description */
-  ion-item ion-label p {
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-top: 4px;
-  }
-  
-  /* Background Color for Routine List */
-  ion-list {
-    --background: #f9f9f9; /* Light gray background for the list */
-  }
-  
-  /* Floating Action Button Styling */
-  ion-fab {
-    --background: #10dc60; /* Green for the floating action button */
-    --background-focused: #1ddc72; /* Slightly brighter green when focused */
-    --color: white; /* White icon color */
-  }
-  
+
   ion-fab-button {
-    --border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Floating effect for the button */
-    transition: transform 0.3s ease;
+    font-size: 24px;
   }
-  
-  /* Floating Action Button Hover Effect */
-  ion-fab-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Bigger shadow on hover */
-  }
-  
-  /* Responsive Design for Smaller Screens */
-  @media (max-width: 768px) {
-    ion-item {
-      padding: 8px 12px;
-    }
-  
-    ion-label h2 {
-      font-size: 1rem;
-    }
-  
-    ion-label p {
-      font-size: 0.8rem;
-    }
-  
-    ion-button {
-      padding: 6px 16px;
-      font-size: 0.85rem;
-    }
-  
-    ion-fab-button {
-      font-size: 24px;
-    }
-  }
-  
+}

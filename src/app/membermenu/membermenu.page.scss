@@ -1,5 +1,5 @@
 body {
-  background-image: url('/assets/bg.jpg'); /* Reference the image correctly */
+  background-image: url('/assets/bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,57 +9,66 @@ body {
 }
 
 ion-content {
-  --background: transparent; /* Ensure ion-content has no background color */
+  --background: transparent;
 }
 
 .container {
-    padding: 10px 15px;
-    text-align: center;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.member-menu-content {
+  h2 {
+    font-size: clamp(1.5em, 5vw, 2em);
+    margin-bottom: 15px;
+    color: #ff6347;
   }
-  
-  .member-menu-content {
-    h2 {
-      font-size: clamp(1.5em, 5vw, 2em);
-      margin-bottom: 15px;
-      color: #ff6347;
-    }
-  
-    ion-list {
-      margin: 0 auto;
-      width: 100%;
-      max-width: 400px;
-      padding: 0;
-  
-      ion-item {
-        --background: rgba(0, 0, 0, 0.5); /* 5% transparent black */
-        color: #d3d3d3;
-        border-radius: 8px;
-        margin: 8px 0;
-        padding: 15px;
-        --inner-padding: 10px;
-        display: flex;
-        align-items: center;
-      }
-  
-      ion-icon {
-        color: #ff6347;
-        font-size: 1.5em;
-      }
-    }
+
+  ion-list {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.25);
   }
-  
-  @media (max-width: 600px) {
-    .container {
-      padding: 5px 10px;
-    }
-  
-    .member-menu-content h2 {
-      font-size: 1.5em;
-    }
-  
-    ion-item {
-      padding: 10px;
-      --inner-padding: 8px;
-    }
+
+  ion-item {
+    color: #d3d3d3;
+    border-radius: 8px;
+    margin: 8px 0;
+    padding: 15px;
+    --inner-padding: 10px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease;
   }
-  
+
+  ion-item:hover {
+    background: rgba(255, 99, 71, 0.8);
+    color: white;
+  }
+
+  ion-icon {
+    color: #ff6347;
+    font-size: 2em;
+    margin-right: 15px;
+    visibility: visible !important;
+    width: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 5px 10px;
+  }
+
+  .member-menu-content h2 {
+    font-size: 1.5em;
+  }
+
+  ion-item {
+    padding: 10px;
+    --inner-padding: 8px;
+  }
+}

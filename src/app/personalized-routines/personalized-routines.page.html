@@ -1,13 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>personalized-routines</ion-title>
+    <!-- Back to Member Menu Button -->
+    <ion-button fill="clear" color="medium" (click)="goToMemberMenu()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title>Personalized Routine</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">personalized-routines</ion-title>
+      <ion-title size="large">Weekly Routine</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- Weekly Routine List -->
+  <ion-list>
+    <ion-item *ngFor="let routine of coachRoutines">
+      <ion-label>
+        <h2>{{ routine.name }} ({{ routine.day }})</h2>
+        <p>{{ routine.description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

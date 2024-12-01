@@ -20,9 +20,8 @@
     <ion-item *ngFor="let routine of coachRoutines">
       <ion-label>
         <h2>{{ routine.name }} ({{ routine.day }})</h2>
-        <p>{{ routine.description }}</p>
+        <p [innerHTML]="routine.description"></p>
       </ion-label>
     </ion-item>
   </ion-list>
-
 </ion-content>

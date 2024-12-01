@@ -31,7 +31,11 @@
                 "output": "./svg"
               }
             ],
-            
+            "styles": [
+              "src/global.scss",
+              "src/theme/variables.scss",
+              "src/assets/leaflet.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -80,7 +84,6 @@
               "buildTarget": "app:build:development"
             },
             "ci": {
-              "progress": false
             }
           },
           "defaultConfiguration": "development"
@@ -111,8 +114,13 @@
                 "output": "./svg"
               }
             ],
-           
-            "scripts": []
+            "styles": [
+              "src/global.scss",
+              "src/theme/variables.scss",
+              "src/assets/leaflet.css"
+            ],
+            "scripts": [],
+            "progress": false
           },
           "configurations": {
             "ci": {
@@ -123,7 +131,7 @@
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
-          "options": {
+          "options": { "progress": false,
             "lintFilePatterns": [
               "src/**/*.ts",
               "src/**/*.html"

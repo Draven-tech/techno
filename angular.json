@@ -21,7 +21,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               {
-                "glob": "*/",
+                "glob": "**/*",
                 "input": "src/assets",
                 "output": "assets"
               },
@@ -33,8 +33,7 @@
             ],
             "styles": [
               "src/global.scss",
-              "src/theme/variables.scss",
-              "node_modules/leaflet/dist/leaflet.css"
+              "src/theme/variables.scss"
             ],
             "scripts": []
           },
@@ -68,9 +67,7 @@
               "sourceMap": true,
               "namedChunks": true
             },
-            "ci": {
-              "progress": false
-            }
+            "ci": {}
           },
           "defaultConfiguration": "production"
         },
@@ -83,8 +80,7 @@
             "development": {
               "buildTarget": "app:build:development"
             },
-            "ci": {
-            }
+            "ci": {}
           },
           "defaultConfiguration": "development"
         },
@@ -104,7 +100,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               {
-                "glob": "*/",
+                "glob": "**/*",
                 "input": "src/assets",
                 "output": "assets"
               },
@@ -116,22 +112,19 @@
             ],
             "styles": [
               "src/global.scss",
-              "src/theme/variables.scss",
-              "src/assets/leaflet.css"
+              "src/theme/variables.scss"
             ],
-            "scripts": [],
-            "progress": false
+            "scripts": []
           },
           "configurations": {
             "ci": {
-              "progress": false,
               "watch": false
             }
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
-          "options": { "progress": false,
+          "options": {
             "lintFilePatterns": [
               "src/**/*.ts",
               "src/**/*.html"

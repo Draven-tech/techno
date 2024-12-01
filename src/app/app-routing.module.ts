@@ -26,6 +26,18 @@ const routes: Routes = [
     path: 'membermenu',
     loadChildren: () => import('./membermenu/membermenu.module').then( m => m.MembermenuPageModule)
   },
+  {
+    path: 'personalized-routines',
+    loadChildren: () => import('./personalized-routines/personalized-routines.module').then( m => m.PersonalizedRoutinesPageModule)
+  },
+  {
+    path: 'diet-plans',
+    loadChildren: () => import('./diet-plans/diet-plans.module').then( m => m.DietPlansPageModule)
+  },
+  {
+    path: 'equipment-status',
+    loadChildren: () => import('./equipment-status/equipment-status.module').then( m => m.EquipmentStatusPageModule)
+  },
 
   // Add any other routes you need here
 ];

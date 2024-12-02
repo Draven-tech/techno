@@ -1,15 +1,10 @@
-body {
-  background-image: url('/assets/bg.jpg'); /* Reference the image correctly */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  height: 100%;
-  width: 100%;
+ion-content {
+  --background: none; /* Ensure ion-content has no background color */
 }
 
-ion-content {
-  --background: transparent; /* Ensure ion-content has no background color */
+.home-background {
+  height: 100vh;
+  background: url('/assets/bg.jpg') no-repeat center center/cover;
 }
 
 .welcome-section {

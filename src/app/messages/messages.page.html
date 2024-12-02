@@ -1,13 +1,30 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>messages</ion-title>
+    <ion-title>Messages</ion-title>
+  </ion-toolbar>
+  <!-- Search Bar -->
+  <ion-toolbar>
+    <ion-searchbar 
+      [(ngModel)]="searchInput" 
+      (ionInput)="onSearch()" 
+      placeholder="Search by name"
+    ></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">messages</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-content>
+  <!-- Filtered Threads List -->
+  <ion-list>
+    <ion-item *ngFor="let thread of filteredThreads" (click)="openThread(thread)">
+      <ion-avatar slot="start">
+        <img [src]="thread.avatar" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ thread.name }}</h2>
+        <p>{{ thread.lastMessage }}</p>
+        <small>{{ thread.lastMessageTime | date: 'short' }}</small>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

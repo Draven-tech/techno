@@ -33,7 +33,7 @@ export class AdminmessagePage implements OnInit {
       {
         id: 1,
         name: 'Customer',
-        avatar: 'https://draven-tech.github.io/techno/assets/avatar-cust1.jpg',
+        avatar: 'https://draven-tech.github.io/techno/assets/cust1.jpg',
         lastMessage: 'A mix of both would be ideal. Let’s push for balance.',
         lastMessageTime: new Date(),
         messages: [

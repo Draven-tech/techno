@@ -66,7 +66,27 @@ const routes: Routes = [
   {
     path: 'meal-options',
     loadChildren: () => import('./meal-options/meal-options.module').then( m => m.MealOptionsPageModule)
+  },  {
+    path: 'admin-login',
+    loadChildren: () => import('./admin-login/admin-login.module').then( m => m.AdminLoginPageModule)
   },
+  {
+    path: 'adminmenu',
+    loadChildren: () => import('./adminmenu/adminmenu.module').then( m => m.AdminmenuPageModule)
+  },
+  {
+    path: 'edit-personalized-routines',
+    loadChildren: () => import('./edit-personalized-routines/edit-personalized-routines.module').then( m => m.EditPersonalizedRoutinesPageModule)
+  },
+  {
+    path: 'edit-diet-plans',
+    loadChildren: () => import('./edit-diet-plans/edit-diet-plans.module').then( m => m.EditDietPlansPageModule)
+  },
+  {
+    path: 'edit-equipment-status',
+    loadChildren: () => import('./edit-equipment-status/edit-equipment-status.module').then( m => m.EditEquipmentStatusPageModule)
+  },
+
 
 
 

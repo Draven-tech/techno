@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="confirmLogout()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>Logout
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Admin Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="container">
+  <div class="member-menu-content">
+    <h2>Admin Access</h2>
+    <ion-list>
+      <ion-item button routerLink="/edit-personalized-routines">
+        <ion-icon name="fitness-outline" slot="start"></ion-icon>
+        <ion-label>Edit Workout Routines</ion-label>
+      </ion-item>
+      <ion-item button routerLink="/edit-diet-plans">
+        <ion-icon name="restaurant-outline" slot="start"></ion-icon>
+        <ion-label>Edit Diet Plans</ion-label>
+      </ion-item>
+      <ion-item button routerLink="/edit-equipment-status">
+        <ion-icon name="barbell-outline" slot="start"></ion-icon>
+        <ion-label>Edit Equipment Status</ion-label>
+      </ion-item>
+      <ion-item button routerLink="/messages">
+        <ion-icon name="chatbubbles-outline" slot="start"></ion-icon>
+        <ion-label>Messenger</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

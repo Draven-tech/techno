@@ -108,11 +108,11 @@ export class EquipmentStatusPage implements OnInit {
 
   ngOnInit() {}
 
-  selectEquipment(equipment: Equipment) {
+  selectEquipment(equipment: Equipment): void {
     this.selectedEquipment = equipment;
   }
 
-  clearSelection() {
+  clearSelection(): void {
     this.selectedEquipment = null;
   }
 }

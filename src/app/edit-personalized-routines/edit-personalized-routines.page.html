@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admingmenu"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Personalized Routine</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let customer of customers" (click)="selectCustomerForEdit(customer)">
+      <ion-label>
+        <h2>{{ customer.name }}'s Routines</h2>
+      </ion-label>
+      <ion-button expand="block" color="primary">Edit</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Modal for editing customer's routines -->
+  <ion-modal [isOpen]="showEditModal" (ionModalDidDismiss)="dismissEditModal()">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Edit {{ selectedCustomer?.name }}'s Routine</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="dismissEditModal()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <form (ngSubmit)="saveCustomerRoutine()">
+          <ion-list>
+            <ion-item *ngFor="let routine of selectedCustomer?.routines">
+              <ion-label>
+                <h3>{{ routine.name }} ({{ routine.day }})</h3>
+                <ion-textarea [(ngModel)]="routine.description" name="description"></ion-textarea>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+
+          <ion-button expand="full" type="submit" color="primary">Save Changes</ion-button>
+        </form>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

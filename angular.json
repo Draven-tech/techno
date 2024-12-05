@@ -106,7 +106,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "src/assets",
+                "input": "assets",
                 "output": "assets"
               },
               {

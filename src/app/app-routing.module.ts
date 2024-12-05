@@ -90,7 +90,11 @@ const routes: Routes = [
   {
     path: 'edit-equipment-status',
     loadChildren: () => import('./edit-equipment-status/edit-equipment-status.module').then( m => m.EditEquipmentStatusPageModule)
+  },  {
+    path: 'adminmessage',
+    loadChildren: () => import('./adminmessage/adminmessage.module').then( m => m.AdminmessagePageModule)
   },
+
 
 
 

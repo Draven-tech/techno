@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Messages</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar
+      [(ngModel)]="searchInput"
+      (ionInput)="onSearch()"
+      placeholder="Search by name"
+    ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let thread of filteredThreads" (click)="openThread(thread)">
+      <!-- Avatar -->
+      <ion-avatar slot="start">
+        <img [src]="thread.avatar" alt="{{ thread.name }}'s photo"/>
+      </ion-avatar>
+
+      <!-- Message Content -->
+      <ion-label class="message-details">
+        <h2>{{ thread.name }}</h2>
+        <p class="message-preview">{{ thread.lastMessage }}</p>
+      </ion-label>
+
+      <!-- Last Message Time -->
+      <ion-note slot="end" class="message-time">
+        {{ thread.lastMessageTime | date: 'shortTime' }}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

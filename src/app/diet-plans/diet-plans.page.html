@@ -14,7 +14,7 @@
       <h2>{{ day }}</h2>
       
       <ion-list>
-        <ion-item>
+        <ion-item (click)="showMealInfo('Pre-Workout Meal', day)">
           <ion-thumbnail slot="start">
             <img src="assets/Pre-Workout.png" alt="Pre-Workout Meal">
           </ion-thumbnail>
@@ -23,7 +23,7 @@
           </ion-label>
         </ion-item>
 
-        <ion-item>
+        <ion-item (click)="showMealInfo('Post-Workout Meal', day)">
           <ion-thumbnail slot="start">
             <img src="assets/Post-Workout.png" alt="Post-Workout Meal">
           </ion-thumbnail>
@@ -32,7 +32,7 @@
           </ion-label>
         </ion-item>
 
-        <ion-item>
+        <ion-item (click)="showMealInfo('Hydration Plan', day)">
           <ion-thumbnail slot="start">
             <img src="assets/Hydration.png" alt="Hydration Plan">
           </ion-thumbnail>

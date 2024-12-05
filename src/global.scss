@@ -37,7 +37,7 @@
 @import "@ionic/angular/css/palettes/dark.system.css";
 
 body {
-    background-image: url('/assets/bg.jpg'); /* Adjust the path if needed */
+    background: url('/assets/bg.jpg'); /* Adjust the path if needed */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

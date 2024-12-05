@@ -21,7 +21,7 @@ export class EquipmentStatusPage implements OnInit {
       name: 'Treadmill',
       units: [
         { name: 'Treadmill 1', isAvailable: true },
-        { name: 'Treadmill 2', isAvailable: false },
+        { name: 'Treadmill 2', isAvailable: true },
         { name: 'Treadmill 3', isAvailable: true },
         { name: 'Treadmill 4', isAvailable: false },
       ],
@@ -108,11 +108,11 @@ export class EquipmentStatusPage implements OnInit {
 
   ngOnInit() {}
 
-  selectEquipment(equipment: Equipment) {
+  selectEquipment(equipment: Equipment): void {
     this.selectedEquipment = equipment;
   }
 
-  clearSelection() {
+  clearSelection(): void {
     this.selectedEquipment = null;
   }
 }

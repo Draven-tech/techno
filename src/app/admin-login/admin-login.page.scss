@@ -1,0 +1,93 @@
+body {
+    background-image: url('/assets/bg.jpg'); /* Reference the image correctly */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  ion-content {
+    --background: transparent; /* Ensure ion-content has no background color */
+  }
+  
+  ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+   
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .logo-image {
+    width: 50vw;
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .login-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* 5% transparent black */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Prevents box from pushing layout out of center */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .login-box h1 {
+    font-size: clamp(24px, 5vw, 32px);
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  ion-item {
+    margin-bottom: 10px;
+  }
+  
+  .login-button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #3880ff;
+    color: white;
+  }
+  
+  .register-link {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .register-link a {
+    color: #3880ff;
+    text-decoration: none;
+  }
+  
+  ion-item {
+    --highlight-color-focused: #3880ff;
+    margin-bottom: 15px; /* Adds space between items */
+  }
+  
+  ion-input {
+    --padding-top: 25px; /* Increases space between label and input */
+    --padding-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  

@@ -1,8 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
+    <!-- Conditionally hide the back button when a unit is selected -->
+    <ion-buttons slot="start" *ngIf="!selectedEquipment">
       <ion-back-button defaultHref="/membermenu"></ion-back-button>
     </ion-buttons>
+    
     <ion-title>Equipment Status</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -30,13 +32,14 @@
       <ion-label>
         <h2>{{ unit.name }}</h2>
         <p>Status: 
-          <span [ngClass]="{'available': unit.isAvailable, 'in-use': !unit.isAvailable}">
-            {{ unit.isAvailable ? 'Available' : 'In Use' }}
+          <span [ngClass]="{'available': unit.isAvailable, 'in-maintenance': !unit.isAvailable}">
+            {{ unit.isAvailable ? 'Available' : 'In Maintenance' }}
           </span>
         </p>
       </ion-label>
     </ion-item>
 
-    <ion-button expand="full" (click)="clearSelection()">Back</ion-button>
+    <!-- Back Button to Return to Equipment List -->
+    <ion-button expand="full" (click)="clearSelection()">Back to Equipment List</ion-button>
   </ion-list>
 </ion-content>

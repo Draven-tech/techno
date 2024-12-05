@@ -5,33 +5,29 @@
         <ion-icon slot="icon-only" name="arrow-back"></ion-icon>Logout
       </ion-button>
     </ion-buttons>
-    <ion-title>Member Menu</ion-title>
+    <ion-title>Admin Menu</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="container">
   <div class="member-menu-content">
-    <h2>Exclusive Access</h2>
+    <h2>Admin Access</h2>
     <ion-list>
-      <ion-item button routerLink="/personalized-routines">
+      <ion-item button routerLink="/edit-personalized-routines">
         <ion-icon name="fitness-outline" slot="start"></ion-icon>
-        <ion-label>Personalized Workout Routines</ion-label>
+        <ion-label>Edit Workout Routines</ion-label>
       </ion-item>
-      <ion-item button routerLink="/diet-plans">
+      <ion-item button routerLink="/edit-diet-plans">
         <ion-icon name="restaurant-outline" slot="start"></ion-icon>
-        <ion-label>Diet Plans</ion-label>
+        <ion-label>Edit Diet Plans</ion-label>
       </ion-item>
-      <ion-item button routerLink="/equipment-status">
+      <ion-item button routerLink="/edit-equipment-status">
         <ion-icon name="barbell-outline" slot="start"></ion-icon>
-        <ion-label>Equipment Status</ion-label>
+        <ion-label>Edit Equipment Status</ion-label>
       </ion-item>
       <ion-item button routerLink="/messages">
         <ion-icon name="chatbubbles-outline" slot="start"></ion-icon>
         <ion-label>Messenger</ion-label>
-      </ion-item>
-      <ion-item button routerLink="/gym-locations">
-        <ion-icon name="location-outline" slot="start"></ion-icon>
-        <ion-label>Gym Locations</ion-label>
       </ion-item>
     </ion-list>
   </div>

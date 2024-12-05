@@ -2,11 +2,6 @@ ion-content {
   --background: none; /* Ensure ion-content has no background color */
 }
 
-.home-background {
-  height: 100vh;
-  background: url('/assets/bg.jpg') no-repeat center center/cover;
-}
-
 .welcome-section {
   display: flex;
   justify-content: center;

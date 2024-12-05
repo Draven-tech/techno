@@ -1,11 +1,10 @@
-<ion-buttons slot="start">
-  <ion-back-button defaultHref="/membermenu"></ion-back-button>
-</ion-buttons>
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/membermenu"></ion-back-button>
+    </ion-buttons>
     <ion-title>Messages</ion-title>
   </ion-toolbar>
-  <!-- Search Bar -->
   <ion-toolbar>
     <ion-searchbar 
       [(ngModel)]="searchInput" 
@@ -17,7 +16,6 @@
 
 
 <ion-content>
-  <!-- Filtered Threads List -->
   <ion-list>
     <ion-item *ngFor="let thread of filteredThreads" (click)="openThread(thread)">
       <ion-avatar slot="start">

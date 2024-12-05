@@ -1,20 +1,88 @@
-ion-header {
-    --background: var(--ion-color-primary);
-    --color: white;
-  }
+.large-modal {
+    ion-content {
+      --background: #000; /* Black background */
+      padding: 20px;
+    }
   
-  ion-title {
-    font-weight: bold;
-    text-align: center;
-  }
+    .modal-header {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffffff; /* White text for contrast */
+      text-align: center;
+      margin-bottom: 10px;
+    }
   
-  ion-button {
-    --background: transparent;
-  }
+    .modal-content {
+      font-size: 1.2rem;
+      color: #f0f0f0; /* Light gray for content text */
+      line-height: 1.6;
+      margin-top: 15px;
   
-  ion-content {
-    padding: 20px;
-    font-size: 20px;
-    line-height: 1.6;
+      ion-item {
+        --background: none;
+        --color: #ffffff; /* White text */
+        border-bottom: 1px solid #555; /* Subtle border for separation */
+        padding: 10px 0;
+  
+        & strong {
+          font-weight: bold;
+          color: #1abc9c; /* Accent color for key points */
+        }
+      }
+  
+      ion-list {
+        margin: 10px 0;
+  
+        ion-item {
+          &:hover {
+            background-color: #333; /* Dark hover effect */
+          }
+        }
+      }
+    }
+  
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+  
+      ion-button {
+        --background: #1abc9c;
+        --background-hover: #16a085;
+        --color: white;
+        font-size: 1rem;
+        padding: 10px 20px;
+        border-radius: 8px;
+  
+        &:first-child {
+          margin-right: 10px;
+          --background: #e74c3c;
+          --background-hover: #c0392b;
+        }
+      }
+    }
+  
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .modal-header {
+        font-size: 1.5rem;
+      }
+  
+      .modal-content {
+        font-size: 1rem;
+      }
+  
+      .modal-footer {
+        flex-direction: column;
+        ion-button {
+          width: 100%;
+          margin-bottom: 10px;
+  
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
   }
   

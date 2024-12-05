@@ -72,7 +72,7 @@ const routes: Routes = [
     loadChildren: () => import('./chatbox/chatbox.module').then( m => m.ChatboxPageModule)
   },
   {
-  path: 'admin-login',
+    path: 'admin-login',
     loadChildren: () => import('./admin-login/admin-login.module').then( m => m.AdminLoginPageModule)
   },
   {

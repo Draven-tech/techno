@@ -33,7 +33,7 @@ export class MessagesPage implements OnInit {
       {
         id: 1,
         name: 'Coach Kenn',
-        avatar: '../assets/avatar-kenn.png',
+        avatar: '/assets/avatar-kenn.png',
         lastMessage: 'A mix of both would be ideal. Let’s push for balance.',
         lastMessageTime: new Date(),
         messages: [
@@ -47,7 +47,7 @@ export class MessagesPage implements OnInit {
       {
         id: 2,
         name: 'Coach Jean',
-        avatar: '../assets/avatar-jean.png',
+        avatar: '/assets/avatar-jean.png',
         lastMessage: 'You: Will do, thanks!',
         lastMessageTime: new Date(),
         messages: [
@@ -59,7 +59,7 @@ export class MessagesPage implements OnInit {
       {
         id: 3,
         name: 'Coach Zandale',
-        avatar: '../assets/avatar-zandale.png',
+        avatar: '/assets/avatar-zandale.png',
         lastMessage: '',
         lastMessageTime: new Date(),
         messages: [
@@ -68,7 +68,7 @@ export class MessagesPage implements OnInit {
       {
         id: 4,
         name: 'Coach Aaron',
-        avatar: '../assets/avatar-aaron.png',
+        avatar: '/assets/avatar-aaron.png',
         lastMessage: '',
         lastMessageTime: new Date(),
         messages: [
@@ -78,7 +78,7 @@ export class MessagesPage implements OnInit {
       {
         id: 5,
         name: 'Coach Jhon Paul',
-        avatar: '../assets/avatar-jp.png',
+        avatar: '/assets/avatar-jp.png',
         lastMessage: '',
         lastMessageTime: new Date(),
         messages: [
@@ -88,7 +88,7 @@ export class MessagesPage implements OnInit {
       {
         id: 5,
         name: 'Coach Randolf',
-        avatar: '../assets/avatar-randolf.png',
+        avatar: '/assets/avatar-randolf.png',
         lastMessage: '',
         lastMessageTime: new Date(),
         messages: [

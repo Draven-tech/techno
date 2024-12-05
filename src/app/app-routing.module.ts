@@ -66,7 +66,11 @@ const routes: Routes = [
   {
     path: 'meal-options',
     loadChildren: () => import('./meal-options/meal-options.module').then( m => m.MealOptionsPageModule)
+  },  {
+    path: 'chatbox',
+    loadChildren: () => import('./chatbox/chatbox.module').then( m => m.ChatboxPageModule)
   },
+
 
 
 

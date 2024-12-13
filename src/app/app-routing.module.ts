@@ -94,6 +94,10 @@ const routes: Routes = [
     path: 'adminmessage',
     loadChildren: () => import('./adminmessage/adminmessage.module').then( m => m.AdminmessagePageModule)
   },
+  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
+  },
 
 
 

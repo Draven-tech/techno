@@ -21,6 +21,15 @@
         <ion-input formControlName="password" type="password"></ion-input>
       </ion-item>
 
+      <!-- Dropdown for selecting a plan -->
+      <ion-item lines="none" class="animated-input">
+        <ion-select formControlName="plan" interface="popover" placeholder="Choose a plan">
+          <ion-select-option *ngFor="let plan of plans" [value]="plan.id">
+            {{ plan.name }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
       <ion-button expand="block" type="submit" class="animated-button" [disabled]="!registerForm.valid">
         Register
       </ion-button>

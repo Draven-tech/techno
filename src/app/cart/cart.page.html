@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dietplans"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    <ion-text color="medium">
+      <h2>Your cart is empty!</h2>
+    </ion-text>
+  </div>
+
+  <ion-list *ngIf="cartItems.length > 0">
+    <ion-item *ngFor="let item of cartItems; let i = index">
+      <ion-label>
+        <h3>{{ item.mealName }} for {{ item.day }}</h3>
+        <p>{{ item.mealDetails }}</p>
+      </ion-label>
+      <ion-button fill="clear" color="danger" (click)="removeMeal(i)">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-footer>
+    <ion-button expand="full" (click)="clearCart()">Clear Cart</ion-button>
+  </ion-footer>
+</ion-content>

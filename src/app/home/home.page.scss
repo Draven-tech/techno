@@ -53,19 +53,23 @@ p.aboutus-link {
   }
 }
 ion-button.member-btn {
-  --background: #4caf50; /* Green background for MEMBER button */
-  --color: #ffffff; /* White text */
+  --background: #4caf50; 
+  --color: #ffffff; 
   margin: 10px 0;
   width: 90%;
   max-width: 300px;
   align-self: center;
+  --background-focused: #388e3c; 
+  --background-activated: #2e7d32; 
 }
 
 ion-button.non-member-btn {
-  --background: #f44336; /* Red background for NON-MEMBER button */
-  --color: #ffffff; /* White text */
+  --background: #f44336; 
+  --color: #ffffff; 
   margin: 10px 0;
   width: 90%;
   max-width: 300px;
   align-self: center;
+  --background-focused: #d32f2f;
+  --background-activated: #b71c1c;
 }

@@ -33,7 +33,7 @@
         <h2>{{ unit.name }}</h2>
         <p>Status: 
           <span [ngClass]="{'in-use': unit.isInUse, 'not-in-use': !unit.isInUse}">
-            {{ unit.isInUse ? 'In Use' : 'Not in Use' }}
+            {{ unit.isInUse ? 'Available' : 'Under Maintenance' }}
           </span>
         </p>
       </ion-label>

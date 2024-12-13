@@ -72,3 +72,22 @@ ion-content {
     --inner-padding: 8px;
   }
 }
+
+ion-button {
+  --background: transparent; 
+  --color: #ffffff; 
+}
+
+ion-button:hover {
+  --color: #e0e0e0; 
+}
+
+ion-alert-button {
+  --color: #ff9800; 
+  --background: transparent; 
+}
+
+ion-alert-button:focus {
+  --color: #ffa726; 
+  --background: rgba(255, 152, 0, 0.1); 
+}

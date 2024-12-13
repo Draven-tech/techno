@@ -18,9 +18,12 @@ export class MembermenuPage {
         {
           text: 'Cancel',
           role: 'cancel',
+          cssClass: 'cancel-button',
         },
         {
           text: 'Yes',
+          role: 'confirm',
+        cssClass: 'confirm-button',
           handler: () => {
             this.router.navigate(['/home']);  // Navigate to the home page on confirmation
           },

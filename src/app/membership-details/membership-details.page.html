@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/membership-option"></ion-back-button>
     </ion-buttons>
@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true"> 
   <ion-card>
     <ion-card-header>
       <ion-card-title>{{ plan.name }}</ion-card-title>
@@ -19,7 +19,7 @@
       <p><strong>Benefits:</strong> {{ plan.benefits }}</p>
       
       <!-- Option to subscribe -->
-      <ion-button expand="full" color="primary">
+      <ion-button expand="full">
         <ion-icon name="card" slot="start"></ion-icon>
         Subscribe to This Plan
       </ion-button>

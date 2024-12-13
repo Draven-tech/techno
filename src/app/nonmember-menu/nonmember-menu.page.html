@@ -3,33 +3,31 @@
 </ion-buttons>
 
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-title>Non-Member Menu</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="menu-container">
-    <!-- Order Meals Button Section -->
     <ion-card>
       <ion-card-header>
         <ion-card-title>Order Meals</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <ion-button expand="full" color="tertiary" routerLink="/meal-options">
+        <ion-button expand="full" class="meals-button" routerLink="/meal-options">
           <ion-icon name="fast-food" slot="start"></ion-icon>
           View Meals
         </ion-button>
       </ion-card-content>
     </ion-card>
 
-    <!-- Membership Plans Button Section -->
     <ion-card>
       <ion-card-header>
         <ion-card-title>Membership Plans</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <ion-button expand="full" color="secondary" routerLink="/membership-options">
+        <ion-button expand="full" class="plans-button" routerLink="/membership-options">
           <ion-icon name="card" slot="start"></ion-icon>
           View Plans
         </ion-button>

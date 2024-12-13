@@ -19,9 +19,40 @@ ion-content {
   ion-card {
     margin: 10px 0;
   }
+
+  ion-card-title {
+    color: #4caf50; 
+    font-weight: bold;
+  }
+  
+  ion-card-subtitle {
+    color: #757575; 
+  }
+  
   
   ion-button {
     margin-top: 20px;
     width: 100%;
+  }
+  
+  ion-toolbar {
+    --background: #4caf50; 
+    --color: #ffffff; 
+  }
+  
+  ion-back-button {
+    --color: #ffffff; 
+  }
+  
+  ion-title {
+    color: #ffffff; 
+  }
+  
+  ion-button {
+    --background: #4caf50; 
+    --color: #ffffff; 
+    --background-focused: #388e3c; 
+    --background-activated: #2e7d32; 
+    margin-top: 20px;
   }
   

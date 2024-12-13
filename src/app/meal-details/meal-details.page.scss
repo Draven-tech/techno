@@ -12,6 +12,14 @@ ion-content {
   --background: transparent;
 }
 
+ion-toolbar {
+  --background:#ff0000; 
+  --color: #ffffff; 
+}
+
+ion-back-button {
+  --color: #ffffff; 
+}
 
 .details-container {
     padding: 20px;
@@ -22,6 +30,8 @@ ion-content {
   }
   
   ion-button {
+    --background:#ff0000; 
+    --color: #ffffff; 
     margin-top: 20px;
     width: 100%;
   }

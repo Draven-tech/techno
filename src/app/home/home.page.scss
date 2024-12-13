@@ -51,8 +51,21 @@ p.aboutus-link {
   p {
     font-size: 5vw;
   }
+}
+ion-button.member-btn {
+  --background: #4caf50; /* Green background for MEMBER button */
+  --color: #ffffff; /* White text */
+  margin: 10px 0;
+  width: 90%;
+  max-width: 300px;
+  align-self: center;
+}
 
-  ion-button {
-    width: 80%;
-  }
+ion-button.non-member-btn {
+  --background: #f44336; /* Red background for NON-MEMBER button */
+  --color: #ffffff; /* White text */
+  margin: 10px 0;
+  width: 90%;
+  max-width: 300px;
+  align-self: center;
 }

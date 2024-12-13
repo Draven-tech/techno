@@ -73,3 +73,21 @@ ion-button.non-member-btn {
   --background-focused: #d32f2f;
   --background-activated: #b71c1c;
 }
+
+.aboutus-link {
+  color: #ffffff; 
+  font-size: 20px; 
+  text-align: center; 
+  margin-top: 20px;
+
+  a {
+    color: #ff0000; 
+    font-weight: bold; 
+    text-decoration: underline; 
+  }
+
+  a:hover {
+    color: #cc0000; 
+    text-decoration: none; 
+  }
+}

@@ -65,7 +65,7 @@ ion-item {
 .login-button {
   margin-top: 20px;
   width: 100%;
-  background-color: #3880ff;
+  --background: #4caf50;
   color: white;
 }
 
@@ -75,18 +75,21 @@ ion-item {
 }
 
 .register-link a {
-  color: #3880ff;
+  color: #f44336;
   text-decoration: none;
+  --background-focused: #d32f2f;
+  --background-activated: #b71c1c;
 }
 
 ion-item {
-  --highlight-color-focused: #3880ff;
-  margin-bottom: 15px; /* Adds space between items */
+  --highlight-color-focused: #2e7d32;
+  margin-bottom: 15px; 
+  font-size: 20px;
 }
 
-ion-input {
-  --padding-top: 25px; /* Increases space between label and input */
+ion-input { 
+  --padding-top: 25px; 
   --padding-bottom: 8px;
-  font-size: 16px;
+  font-size: 20px;
 }
 

@@ -1,13 +1,49 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>edit-equipment-status</ion-title>
+    <!-- Conditionally hide the back button when a unit is selected -->
+    <ion-buttons slot="start" *ngIf="!selectedEquipment">
+      <ion-back-button defaultHref="/adminmenu"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title>Edit Equipment Status</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">edit-equipment-status</ion-title>
+      <ion-title size="large">Edit Equipment Status</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- Equipment List -->
+  <ion-list *ngIf="!selectedEquipment">
+    <ion-item *ngFor="let equipment of equipmentList" (click)="selectEquipment(equipment)">
+      <ion-label>
+        <h2>{{ equipment.name }}</h2>
+        <p>Click to edit units</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Equipment Units -->
+  <ion-list *ngIf="selectedEquipment">
+    <ion-item *ngFor="let unit of selectedEquipment.units">
+      <ion-label>
+        <h2>{{ unit.name }}</h2>
+        <p>Status: 
+          <span [ngClass]="{'in-use': unit.isInUse, 'not-in-use': !unit.isInUse}">
+            {{ unit.isInUse ? 'In Use' : 'Not in Use' }}
+          </span>
+        </p>
+      </ion-label>
+      <ion-toggle [(ngModel)]="unit.isInUse"></ion-toggle>
+    </ion-item>
+
+    <!-- Save Button to apply changes -->
+    <ion-button expand="full" color="success" (click)="saveStatus()">Save Status</ion-button>
+
+    <!-- Back Button to Return to Equipment List -->
+    <ion-button expand="full" (click)="clearSelection()">Back to Equipment List</ion-button>
+  </ion-list>
 </ion-content>

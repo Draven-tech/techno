@@ -1,0 +1,39 @@
+ion-item {
+    --background: #1e1d1d;
+    border-radius: 8px;
+    margin: 8px 0;
+    box-shadow: 0 2px 4px rgba(18, 18, 18, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  ion-item:active {
+    transform: scale(0.95);
+  }
+  
+  ion-label {
+    padding: 16px;
+  }
+  
+  ion-label h2 {
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  .in-use {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .not-in-use {
+    color: red;
+    font-weight: bold;
+  }
+  
+  p {
+    color: orange;
+  }
+  
+  ion-toggle {
+    margin-left: auto;
+  }
+  

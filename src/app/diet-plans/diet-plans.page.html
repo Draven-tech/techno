@@ -12,7 +12,10 @@
     <div *ngFor="let day of days">
       <h2>{{ day }}</h2>
       
+      <ion-button (click)="navigateToCart()">Go to Cart</ion-button>
+
       <ion-list>
+        <!-- Pre-Workout Meal -->
         <ion-item (click)="showMealInfo('Pre-Workout Meal', day)">
           <ion-thumbnail slot="start">
             <img src="assets/Pre-Workout.png" alt="Pre-Workout Meal">
@@ -21,7 +24,9 @@
             <h3>Pre-Workout Meal</h3>
           </ion-label>
         </ion-item>
+        <ion-button expand="block" (click)="orderMeal('Pre-Workout Meal', day)">Order Pre-Workout Meal</ion-button>
 
+        <!-- Post-Workout Meal -->
         <ion-item (click)="showMealInfo('Post-Workout Meal', day)">
           <ion-thumbnail slot="start">
             <img src="assets/Post-Workout.png" alt="Post-Workout Meal">
@@ -30,7 +35,9 @@
             <h3>Post-Workout Meal</h3>
           </ion-label>
         </ion-item>
+        <ion-button expand="block" (click)="orderMeal('Post-Workout Meal', day)">Order Post-Workout Meal</ion-button>
 
+        <!-- Hydration Plan -->
         <ion-item (click)="showMealInfo('Hydration Plan', day)">
           <ion-thumbnail slot="start">
             <img src="assets/Hydration.png" alt="Hydration Plan">
@@ -39,6 +46,7 @@
             <h3>Hydration Plan</h3>
           </ion-label>
         </ion-item>
+        <ion-button expand="block" (click)="orderMeal('Hydration Plan', day)">Order Hydration Plan</ion-button>
       </ion-list>
     </div>
   </div>

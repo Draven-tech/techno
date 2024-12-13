@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'; 
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { MealDetailModalComponent } from '../meal-detail-modal/meal-detail-modal.component';
@@ -62,7 +62,7 @@ export class DietPlansPage implements OnInit {
           <ion-item>Boiled eggs</ion-item><br><br>
           <ion-item><strong>Purpose:</strong> <br>Carbs and protein for energy</ion-item>
         </ion-list>
-      `,
+      `
     },
     'Post-Workout Meal': {
       'Monday': `
@@ -113,9 +113,10 @@ export class DietPlansPage implements OnInit {
           <ion-item>Steamed asparagus and wild rice</ion-item><br>
           <ion-item><strong>Purpose:</strong><br><br> Protein and fiber-rich recovery meal</ion-item>
         </ion-list>
-      `,
+      `
     }
   };
+  cartService: any;
 
   constructor(private router: Router, private modalController: ModalController) {}
 
@@ -136,4 +137,15 @@ export class DietPlansPage implements OnInit {
   navigateToMenu() {
     this.router.navigate(['/membermenu']);
   }
+
+  orderMeal(mealName: string, day: string) {
+    const mealDetails = this.mealPlans[mealName][day]; // Get the meal details from the mealPlans object
+    this.cartService.addMealToCart(mealName, day, mealDetails);
+    console.log(`Ordered ${mealName} for ${day}`);
+  }
+
+  navigateToCart() {
+    this.router.navigate(['/cart']);
+  }
+  
 }

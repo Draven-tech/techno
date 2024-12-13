@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/membermenu"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Account Overview</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Plan Details -->
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-card-title>Your Plan</ion-card-title>
+      <ion-card-subtitle>Premium Subscription</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Your next bill is for <strong>₱75</strong> on <strong>01/11/25</strong>.</p>
+      <p>Payment Method: <strong>GCash</strong></p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Account Section -->
+  <ion-list>
+    <ion-item-divider>Account</ion-item-divider>
+    <ion-item button routerLink="/edit-profile">
+      <ion-icon name="person-circle" slot="start"></ion-icon>
+      <ion-label>Edit Profile</ion-label>
+    </ion-item>
+    <ion-item button routerLink="/recover-playlists">
+      <ion-icon name="refresh" slot="start"></ion-icon>
+      <ion-label>Recover History</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Subscription Section -->
+  <ion-list>
+    <ion-item-divider>Subscription</ion-item-divider>
+    <ion-item button routerLink="/available-plans">
+      <ion-icon name="layers" slot="start"></ion-icon>
+      <ion-label>Available Plans</ion-label>
+    </ion-item>
+    <ion-item button routerLink="/manage-subscription">
+      <ion-icon name="options" slot="start"></ion-icon>
+      <ion-label>Manage Subscription</ion-label>
+    </ion-item>
+    <ion-item button routerLink="/cancel-subscription">
+      <ion-icon name="close-circle" slot="start"></ion-icon>
+      <ion-label>Cancel Subscription</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Payment Section -->
+  <ion-list>
+    <ion-item-divider>Payment</ion-item-divider>
+    <ion-item button routerLink="/order-history">
+      <ion-icon name="receipt" slot="start"></ion-icon>
+      <ion-label>Order History</ion-label>
+    </ion-item>
+    <ion-item button routerLink="/saved-cards">
+      <ion-icon name="card" slot="start"></ion-icon>
+      <ion-label>Saved Payment Cards</ion-label>
+    </ion-item>
+    <ion-item button routerLink="/redeem">
+      <ion-icon name="pricetags" slot="start"></ion-icon>
+      <ion-label>Redeem</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

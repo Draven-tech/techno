@@ -1,13 +1,71 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>edit-diet-plans</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/adminmenu"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Diet Plans</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">edit-diet-plans</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="container">
+    <div *ngFor="let day of days">
+      <h2>{{ day }}</h2>
+      
+      <ion-list>
+        <!-- Pre-Workout Meal -->
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="assets/Pre-Workout.png" alt="Pre-Workout Meal">
+          </ion-thumbnail>
+          <ion-label>
+            <h3>Pre-Workout Meal</h3>
+            <ng-container *ngIf="isEditing">
+              <ion-textarea [(ngModel)]="mealPlans['Pre-Workout Meal'][day]" placeholder="Edit Pre-Workout Meal" rows="4"></ion-textarea>
+            </ng-container>
+            <ng-container *ngIf="!isEditing">
+              <p>{{ mealPlans['Pre-Workout Meal'][day] }}</p>
+            </ng-container>
+          </ion-label>
+        </ion-item>
+
+        <!-- Post-Workout Meal -->
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="assets/Post-Workout.png" alt="Post-Workout Meal">
+          </ion-thumbnail>
+          <ion-label>
+            <h3>Post-Workout Meal</h3>
+            <ng-container *ngIf="isEditing">
+              <ion-textarea [(ngModel)]="mealPlans['Post-Workout Meal'][day]" placeholder="Edit Post-Workout Meal" rows="4"></ion-textarea>
+            </ng-container>
+            <ng-container *ngIf="!isEditing">
+              <p>{{ mealPlans['Post-Workout Meal'][day] }}</p>
+            </ng-container>
+          </ion-label>
+        </ion-item>
+
+        <!-- Hydration Plan -->
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="assets/Hydration.png" alt="Hydration Plan">
+          </ion-thumbnail>
+          <ion-label>
+            <h3>Hydration Plan</h3>
+            <ng-container *ngIf="isEditing">
+              <ion-textarea [(ngModel)]="mealPlans['Hydration Plan'][day]" placeholder="Edit Hydration Plan" rows="4"></ion-textarea>
+            </ng-container>
+            <ng-container *ngIf="!isEditing">
+              <p>{{ mealPlans['Hydration Plan'][day] }}</p>
+            </ng-container>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <!-- Edit/Save Button -->
+    <ion-button expand="full" color="primary" (click)="toggleEditMode()">
+      {{ isEditing ? 'Save Changes' : 'Edit Diet Plan' }}
+    </ion-button>
+  </div>
 </ion-content>

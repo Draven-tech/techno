@@ -3,9 +3,31 @@
     color: #fff;
   
     .form-container {
+      width: 100%;
       max-width: 400px;
-      margin: auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      
+      .logo-image {
+        width: 50vw;
+        max-width: 150px;
+        height: auto;
+      }
   
       .title {
         font-size: 2rem;
@@ -71,3 +93,14 @@
     100% { opacity: 1; transform: scale3d(1, 1, 1); }
   }
   
+  .register-link {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .register-link a {
+    color: #f44336;
+    text-decoration: none;
+    --background-focused: #d32f2f;
+    --background-activated: #b71c1c;
+  }

@@ -41,11 +41,10 @@ ion-content {
   width: 100%;
   max-width: 400px;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.5); /* 5% transparent black */
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  /* Prevents box from pushing layout out of center */
   display: flex;
   flex-direction: column;
   justify-content: center;

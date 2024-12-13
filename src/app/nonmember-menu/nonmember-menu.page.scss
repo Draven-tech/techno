@@ -7,6 +7,14 @@ body {
   height: 100%;
   width: 100%;
 }
+ion-back-button {
+  --color: #ff0000; 
+}
+
+ion-toolbar {
+  --background: #4caf50; 
+  --color: #ffffff; 
+}
 
 ion-content {
   --background: transparent;
@@ -17,11 +25,33 @@ ion-content {
   }
   
   ion-card {
-    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.8); 
+    border-radius: 10px; 
+    color: #ffffff; 
+  
+  ion-card-title {
+    font-size: 18px;
+    color: #ffffff; 
   }
+}
   
   ion-button {
+    --color: #ffffff; 
     margin-top: 10px;
     width: 100%;
+  }
+
+  .meals-button {
+    --background: #ff0000; 
+    --color: #ffffff; 
+    --background-focused: #cc0000;
+    --background-activated: #990000; 
+  }
+  
+  .plans-button {
+    --background: #4caf50; 
+    --color: #ffffff; 
+    --background-focused: #388e3c; 
+    --background-activated: #2e7d32; 
   }
   

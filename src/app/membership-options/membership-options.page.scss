@@ -11,3 +11,25 @@ body {
   ion-content {
     --background: transparent;
   }  
+  ion-toolbar {
+    --background: #4caf50; 
+    --color: #ffffff; 
+  }
+  
+  ion-back-button {
+    --color: #ffffff; 
+  }
+  
+  ion-title {
+    color: #ffffff; 
+  }
+  
+  ion-item {
+    --color: #ffffff; 
+    --background: rgba(0, 0, 0, 0.7); 
+  }
+  
+  ion-badge {
+    --background: #4caf50; 
+    --color: #ffffff; 
+  }
